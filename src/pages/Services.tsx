@@ -159,7 +159,7 @@ const Services: React.FC<ServiceProps> = ({ onNavigate }) => {
         </p>
 
         <button
-          onClick={() => onNavigate?.("/about")}
+          onClick={() => onNavigate?.("about")}
           className="px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-xl hover:scale-105 transition"
         >
           Explore More

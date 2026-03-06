@@ -85,16 +85,17 @@ const members = {
 
 const Card = ({ data, gradient }: any) => (
   <div
-    className={`bg-gradient-to-br ${gradient} p-[1px] rounded-2xl shadow-lg hover:scale-105 transition-transform`}
+    className={`bg-gradient-to-br ${gradient} p-[1px] rounded-2xl shadow-lg hover:scale-105 transition-transform h-full`}
   >
-    <div className="bg-slate-900 rounded-2xl p-5 flex flex-col items-center text-center">
+    <div className="bg-slate-900 rounded-2xl p-5 h-full min-h-[320px] flex flex-col items-center text-center">
       <img
         src={data.img}
+        alt={data.name}
         className="w-28 h-28 rounded-full object-cover border-4 border-indigo-500"
       />
       <h3 className="mt-3 text-xl font-semibold text-white">{data.name}</h3>
       <p className="text-indigo-400">{data.role}</p>
-      <p className="text-gray-400 text-sm">{data.dept}</p>
+      <p className="text-gray-400 text-sm mt-1 min-h-[20px]">{data.dept || 'COSC Student Council'}</p>
     </div>
   </div>
 );
